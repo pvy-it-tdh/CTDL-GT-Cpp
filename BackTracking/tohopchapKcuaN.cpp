@@ -3,7 +3,7 @@ using namespace std;
 int a[100],N,K;
 void inkq()
 {
-    for (int i=0;i<K;i++)
+    for (int i=1;i<=K;i++)
     {
         cout << a[i];
     }
@@ -11,7 +11,7 @@ void inkq()
 }
 void Try(int i)
 {
-    for (int j=a[i-1]+1;j<=N-K+1;j++)
+    for (int j=a[i-1]+1;j<=N-K+i;j++)
     {
         a[i]=j;
         if(i==K)
@@ -25,7 +25,7 @@ void Try(int i)
 }
 int main()
 {
-    cin >>N;
+    cin >>N>> K;
     Try(1);
     return 0;
 }
