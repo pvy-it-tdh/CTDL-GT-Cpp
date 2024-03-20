@@ -1,4 +1,6 @@
 #include<iostream>
+#include<iomanip>
+#include<string>
 using namespace std;
 int menu()
 {
@@ -21,6 +23,32 @@ typedef struct  student
     string Class;
 }STUDENT;
 
+typedef STUDENT dataType;
+dataType InputStudent(int ID)
+{
+    dataType st;
+    st.ID=ID;
+    cout << "ID: "<< ID << endl;
+    cin.ignore();
+    cout <<"FullName: ";
+    getline(cin,st.fullName);
+    cout << "Birthday: ";
+    getline(cin, st.Birthday);
+    cout << "Address: ";
+    getline(cin, st.Address);
+    cout << "Class: ";
+    getline(cin, st.Class);
+    return st;
+}
+
+void OutputStudent(dataType st,int index)
+{
+    if(index==0)
+    {
+        // ghi tieu de
+        
+    }
+}
 int main()
 {
     int option=0;
