@@ -8,7 +8,7 @@ int fibonaci(int i)
     {
         return 0;
     }
-    if(i==1)
+    else if(i==1)
     {
         return 1;
     }

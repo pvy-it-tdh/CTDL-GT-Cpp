@@ -1,32 +1,27 @@
 #include<iostream>
 using namespace std;
-int N,X[100];
-void inkq()
+void print(int N,int *a)
 {
-    for (int i=0;i<N;i++){
-        cout <<X[0];
-    }
-    cout << endl;
+    for (int i=0;i<N;i++)
+        cout <<a[i];
+    cout <<"\n";
 }
-void Try(int i)
+void backtrack(int index,int N,int *a)
 {
-    for (int j=0;j<=1;j++)
-    {
-        X[i]=0;
-        if(i==N)
+    for (int i=0;i<=1;i++){
+        a[index]=i;
+        if(index==N)
         {
-            inkq();
+            print(N,a);
+            return;
         }
-        else{
-            Try(i+1);
-        }
+        else if(index<N) backtrack(index+1,N,a);
     }
-
-
 }
 int main()
 {
-    cin >> N;
-    Try(1);
-    return 0;
+    int n;
+    cin >> n;
+    int *a=new int[n];
+    backtrack(0,n,a);
 }
