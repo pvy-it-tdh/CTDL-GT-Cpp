@@ -13,7 +13,7 @@ void backtrack(int index,int N,int *a)
         if(index==N)
         {
             print(N,a);
-            return;
+            return; // bỏ dòng for 
         }
         else if(index<N) backtrack(index+1,N,a);
     }
