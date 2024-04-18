@@ -2,6 +2,8 @@
 using namespace std;
 void heapify(int a[], int n,int i)
 {
+
+    // xây dưng max heap
     int l=2*i+1;
     int r=2*i+2;
     int largest=i;
