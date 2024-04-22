@@ -19,8 +19,6 @@ using namespace std;
 // 8 9
 // output
 // 1 2 3 5 10 4 6 7 9 8
-
-
 int n,m;
 vector<int> adj[1001];
 bool visited[1001];
