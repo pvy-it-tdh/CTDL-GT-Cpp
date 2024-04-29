@@ -5,7 +5,7 @@ struct Node{
     Node *next;
 };
 // Hàm duyệt và in ra từng node
-void printLinkinedList(Node *head)
+void printLinkedList(Node *head)
 {
     Node* current= head;
     while (current!=nullptr)
@@ -26,7 +26,7 @@ int main()
     second->next=third;
     third->data=3;
     third->next=nullptr;
-    printLinkinedList(head);
+    printLinkedList(head);
     // giải phóng bộ nhó
     delete head;
     delete second;
