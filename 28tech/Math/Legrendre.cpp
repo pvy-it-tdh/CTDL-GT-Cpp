@@ -28,6 +28,6 @@ int main()
 {
     int n, k;
     cin >> n >> k;
-    cout << legrender1(n, k);
+    cout << legrender(n, k);
     return 0;
 }
