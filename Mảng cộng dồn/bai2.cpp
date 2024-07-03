@@ -30,5 +30,7 @@ int main()
             cout << result << endl;
         }
     }
+    delete a[];
+    delete prime[];
     return 0;
 }

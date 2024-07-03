@@ -10,14 +10,10 @@ int main()
     {
         cin >> a[i];
     }
-    ll *prime = new ll[n];
+    ll *prime = new ll[n + 3];
     prime[0] = a[0];
     for (int i = 1; i < n; i++)
     {
-        prime[i] = prime[i - 1] + a[i];
-        cout << prime[i] << ' ';
+        prime[i] = a[i] - a[i - 1];
     }
-    delete a[];
-    delete prime[];
-    return 0;
 }
